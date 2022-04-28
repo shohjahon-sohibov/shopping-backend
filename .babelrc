@@ -1,0 +1,32 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread",
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "@lib": "./src/lib/sequelize",
+          "@config": "./src/config",
+          "@modules": "./src/modules",
+          "@model": "./src/model/model",
+          "@user": "./src/modules/user/user.js",
+          "@cart": "./src/modules/cart/cart.js",
+          "@product": "./src/modules/product/product.js",
+          "@io": "./src/server.js"
+        }
+      }
+    ]
+  ]
+}
